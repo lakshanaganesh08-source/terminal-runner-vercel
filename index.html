@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>TERMINAL RUNNER // Retro Cyberpunk Arcade Web Game</title>
+  <meta name="description" content="A fast-paced retro-cyberpunk 2D endless runner arcade game with procedural 8-bit audio synthesis, responsive physics, dynamic obstacles, and high scores." />
+  <meta name="theme-color" content="#0d1117" />
+
+  <!-- Google Fonts: Cyberpunk Monospace & Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <div class="arcade-wrapper">
+    <!-- Header Terminal Status Bar -->
+    <header class="terminal-header">
+      <div class="header-left">
+        <span class="status-indicator"></span>
+        <span class="terminal-title">TERMINAL RUNNER <span class="version">v1.0.0</span></span>
+      </div>
+      <div class="header-center">
+        <span class="system-status">SYS_STATUS: OPTIMAL</span>
+      </div>
+      <div class="header-right">
+        <button id="btn-sound" class="cyber-btn active" title="Toggle Sound (M)">🔊 SOUND: ON</button>
+        <button id="btn-pause" class="cyber-btn" title="Pause Game (P / ESC)">⏸️ PAUSE</button>
+        <button id="btn-restart" class="cyber-btn danger" title="Reboot System (R)">🔄 RESTART</button>
+      </div>
+    </header>
+
+    <!-- Canvas Arcade Cabinet Frame -->
+    <main class="canvas-container">
+      <canvas id="game-canvas" width="1000" height="400"></canvas>
+      <div class="crt-glow-overlay"></div>
+    </main>
+
+    <!-- Control Legends & Mobile Action Buttons -->
+    <footer class="controls-bar">
+      <div class="key-legend-group">
+        <div class="key-badge"><kbd>SPACE</kbd> / <kbd>▲</kbd> / <kbd>W</kbd> JUMP</div>
+        <div class="key-badge"><kbd>▼</kbd> / <kbd>S</kbd> DUCK / FAST-FALL</div>
+        <div class="key-badge"><kbd>P</kbd> / <kbd>ESC</kbd> PAUSE</div>
+        <div class="key-badge"><kbd>R</kbd> REBOOT</div>
+        <div class="key-badge"><kbd>M</kbd> MUTE</div>
+      </div>
+
+      <!-- Mobile Touch Controls -->
+      <div class="mobile-touch-controls">
+        <button id="btn-duck" class="touch-btn duck-btn" aria-label="Slide / Duck">
+          <span class="btn-icon">▼</span>
+          <span class="btn-text">SLIDE</span>
+        </button>
+        <button id="btn-jump" class="touch-btn jump-btn" aria-label="Jump / Initiate">
+          <span class="btn-icon">▲</span>
+          <span class="btn-text">JUMP</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>

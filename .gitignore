@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build output
+dist/
+dist-ssr/
+*.local
+
+# Vercel
+.vercel
+
+# Environment & Cache
+.vite/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python / Legacy
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+.gemini/
+*.log
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db

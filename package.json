@@ -1,0 +1,16 @@
+{
+  "name": "terminal-runner-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Retro-cyberpunk 2D endless runner arcade game built with HTML5 Canvas & TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}
